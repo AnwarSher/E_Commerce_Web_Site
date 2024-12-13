@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Collection</title>
+    <style>
+        /* Reset basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content styles */
+        main {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            color: #333;
+            padding: 10px 0;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #f4f4f4;
+        }
+
+        /* Book Grid */
+        .books {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .books h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .book {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .book img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .book h4 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .book p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .book p.price {
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Books Collection</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Books</a>
+        <a href="#">Genres</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Shop by Genre</h3>
+            <ul>
+                <li><a href="#">Fiction</a></li>
+                <li><a href="#">Non-Fiction</a></li>
+                <li><a href="#">Mystery</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Sci-Fi</a></li>
+                <li><a href="#">Fantasy</a></li>
+                <li><a href="#">Biography</a></li>
+                <li><a href="#">Children's Books</a></li>
+            </ul>
+        </aside>
+
+        <!-- Books Section -->
+        <section class="books">
+            <h2>Featured Books</h2>
+            <div class="book-grid">
+                <div class="book">
+                    <img src="Books pictures/QURAN.jpg" alt="Book 1">
+                    <h4>The Holy Quran</h4>
+                    <p class="price">$19.99</p>
+                </div>
+                <div class="book">
+                    <img src="Books pictures/1984a.jpg" alt="Book 2">
+                    <h4>1984</h4>
+                    <p class="price">$15.99</p>
+                </div>
+                <div class="book">
+                    <img src="Books pictures/To Kill a Mockingbird.jpg" alt="Book 3">
+                    <h4>To Kill a Mockingbird</h4>
+                    <p class="price">$18.99</p>
+                </div>
+                <div class="book">
+                    <img src="Books pictures/Harry Potters.jpg" alt="Book 4">
+                    <h4>Harry Potter</h4>
+                    <p class="price">$25.99</p>
+                </div>
+                <div class="book">
+                    <img src="Books pictures/The pukhtoons.jpg" alt="Book 5">
+                    <h4>PATHAN</h4>
+                    <p class="price">$30.99</p>
+                </div>
+                <div class="book">
+                    <img src="Books pictures/Seerat Nabie.jpg" alt="Book 6">
+                    <h4>Seerat Nabi</h4>
+                    <p class="price">$22.99</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Books Collection</p>
+    </footer>
+</body>
+</html>

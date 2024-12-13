@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service - Shop Now</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        /* Customer Service Section */
+        .customer-service {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ecf0f1;
+        }
+
+        .customer-service h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .customer-service p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-option {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-option i {
+            font-size: 3em;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .contact-option h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #34495e;
+        }
+
+        .contact-option p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 20px 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        Customer Service - Shop Now
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="customer-service">
+            <h2>We’re Here to Help</h2>
+            <p>If you have any questions or need assistance, our customer service team is ready to assist you.</p>
+            <div class="contact-options">
+                <div class="contact-option">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us</h3>
+                    <p>Reach us at <strong>1-800-SHOPNOW</strong></p>
+                </div>
+                <div class="contact-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>Send an email to <strong>support@shopnow.com</strong></p>
+                </div>
+                <div class="contact-option">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Live Chat</h3>
+                    <p>Chat with us for instant support</p>
+                </div>
+                <div class="contact-option">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>Find us at your nearest Shop Now store</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shop Now. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

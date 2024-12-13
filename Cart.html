@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            background-color: #444;
+        }
+
+        /* Cart Styles */
+        .cart-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .cart-item-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cart-item-price {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        .star-rating span {
+            font-size: 24px;
+            color: gold;
+            margin: 0 2px;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity-selector input {
+            width: 40px;
+            padding: 5px;
+            text-align: center;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .remove-item {
+            color: #e74c3c;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Cart Total */
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            padding: 15px;
+            border-top: 2px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .cart-total .total-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2ecc71;
+        }
+
+        /* Checkout Button */
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .checkout-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cart-item img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+            }
+
+            .cart-item-details {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .cart-total {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .checkout-btn {
+                width: auto;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Shop Now Logo.webp" width="100" alt="Shop Now Logo"></a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Cart</a>
+                <a href="Returns & Orders.html">Returns & Orders</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Content -->
+    <div class="cart-container">
+        <h1>Your Shopping Cart</h1>
+
+        <!-- Cart Items -->
+        <div class="cart-item">
+            <img src="Shopping Cart/Wireless Bluetooth Headphones.jpg" alt="Product 1">
+            <div class="cart-item-details">
+                <div class="cart-item-name">Wireless Bluetooth Headphones</div>
+                <div class="cart-item-price">$99.99</div>
+                <div class="star-rating">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                </div>
+            </div>
+            <div class="quantity-selector">
+                <input type="number" value="1" min="1">
+            </div>
+            <div class="remove-item" onclick="removeItem()">Remove</div>
+        </div>
+
+        <div class="cart-item">
+            <img src="Shopping Cart/Smartwatch.jpg" alt="Product 2">
+            <div class="cart-item-details">
+                <div class="cart-item-name">Smartwatch</div>
+                <div class="cart-item-price">$149.99</div>
+                <div class="star-rating">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                </div>
+            </div>
+            <div class="quantity-selector">
+                <input type="number" value="1" min="1">
+            </div>
+            <div class="remove-item" onclick="removeItem()">Remove</div>
+        </div>
+
+        <!-- Cart Total -->
+        <div class="cart-total">
+            <div>Total</div>
+            <div class="total-price">$249.98</div>
+        </div>
+
+        <!-- Checkout Button -->
+        <button class="checkout-btn" onclick="window.location.href='checkout.html';">Proceed to Checkout</button>
+    </div>
+
+    <script>
+        // JavaScript function to remove items from the cart (for demonstration)
+        function removeItem() {
+            alert("Item removed from cart!");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards - Shop Now</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        /* Gift Cards Section */
+        .gift-cards {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ecf0f1;
+        }
+
+        .gift-cards h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .gift-cards p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .gift-card-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gift-card-option {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gift-card-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .gift-card-option i {
+            font-size: 3em;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .gift-card-option h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #34495e;
+        }
+
+        .gift-card-option p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .gift-card-option button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .gift-card-option button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 20px 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #3498db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gift-cards h2 {
+                font-size: 2em;
+            }
+
+            .gift-cards p {
+                font-size: 1em;
+            }
+
+            .gift-card-option {
+                padding: 15px;
+            }
+
+            .gift-card-option i {
+                font-size: 2.5em;
+            }
+
+            .gift-card-option h3 {
+                font-size: 1.2em;
+            }
+
+            .gift-card-option p {
+                font-size: 0.9em;
+            }
+
+            .gift-card-option button {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        Gift Cards - Shop Now
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="gift-cards">
+            <h2>Give the Perfect Gift</h2>
+            <p>Shop Now gift cards are the ideal choice for every occasion. Choose your preferred option below:</p>
+            <div class="gift-card-options">
+                <div class="gift-card-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Gift Cards</h3>
+                    <p>Send a digital gift card directly to the recipient's inbox.</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="gift-card-option">
+                    <i class="fas fa-gift"></i>
+                    <h3>Physical Gift Cards</h3>
+                    <p>Order a physical card to be delivered to your address.</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="gift-card-option">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Custom Gift Cards</h3>
+                    <p>Create a personalized gift card with your message and design.</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="gift-card-option">
+                    <i class="fas fa-star"></i>
+                    <h3>Exclusive Gift Cards</h3>
+                    <p>Choose from premium designs for a unique gifting experience.</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shop Now. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

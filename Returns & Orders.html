@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns & Orders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            background-color: #444;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .returns-orders-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Shop Now Logo.webp" width="100" alt="Shop Now Logo"></a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Cart</a>
+                <a href="returns-orders.html">Returns & Orders</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="returns-orders-container">
+            <h1>Returns & Orders</h1>
+            <p>Welcome to the Returns & Orders page. Here you can view your order history and initiate returns for eligible items.</p>
+
+            <!-- Order History Section -->
+            <section class="order-history">
+                <h2>Your Order History</h2>
+                <table>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Product Name</th>
+                        <th>Order Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>#12345</td>
+                        <td>Wireless Headphones</td>
+                        <td>2024-11-10</td>
+                        <td>Delivered</td>
+                        <td><a href="#">View Order</a></td>
+                    </tr>
+                    <tr>
+                        <td>#12346</td>
+                        <td>Smartwatch</td>
+                        <td>2024-11-12</td>
+                        <td>Shipped</td>
+                        <td><a href="#">Track Order</a></td>
+                    </tr>
+                    <!-- More orders can go here -->
+                </table>
+            </section>
+
+            <!-- Returns Section -->
+            <section class="returns">
+                <h2>Return an Item</h2>
+                <p>If you are not satisfied with your purchase, you can initiate a return within 30 days of delivery.</p>
+                <form action="submit-return.html" method="POST">
+                    <label for="order-id">Order ID:</label>
+                    <input type="text" id="order-id" name="order-id" required>
+
+                    <label for="return-reason">Reason for Return:</label>
+                    <textarea id="return-reason" name="return-reason" required></textarea>
+
+                    <button type="submit">Submit Return</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shop Now. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
